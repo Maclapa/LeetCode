@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode Problems 
+Repository to keep LeetCode challanges
