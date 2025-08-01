@@ -21,18 +21,17 @@
 # Output: 0
 
 
-coins = [2,3]
-amount = 1
-coins.sort(reverse=True)
-number = 0
-result = []
-for coin in coins:
-    while amount >= coin:
-        amount = amount - coin
-        number +=1
+coins = [1,4,5]
+res = []
+def solution(amount, level):
+
+    if amount<0:
+        return 0
     if amount == 0:
-        result.append(number)
-if result:
-    print(min(result))
-else:
-    print(-1)
+        res.append(level)
+        return
+    for coin in coins:
+        new_amount = amount -coin
+        solution(new_amount, level+1)
+solution(amount=13, level=1)
+print(min(res))
