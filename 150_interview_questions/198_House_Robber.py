@@ -17,7 +17,7 @@ print(dp)
 dp[0] = nums[0]
 
 for position, value in enumerate(nums[1:]):
-    if dp[position-1]:
+    if position-1>=0:
         dp[position+1] = max(value+dp[position-1], dp[position])
     else:
         dp[position+1] = max(value, dp[position])
